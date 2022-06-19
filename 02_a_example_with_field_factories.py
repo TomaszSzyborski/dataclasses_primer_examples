@@ -24,7 +24,8 @@ class Person:
         return string in self._search_string
 
 
-@dataclass(frozen=True)
+# @dataclass(frozen=True)
+@dataclass(frozen=False)
 class FrozenPerson:
     name: str = field(default_factory=fake.first_name)
     street: str = field(default_factory=fake.street_address)

@@ -17,7 +17,7 @@ class ClassicPerson:
 
     def __str__(self):
         return f"{self.name} etc etc"
-    
+
     def __post_init__(self):
         self._search_string = f"{self.__dict__}"
 
@@ -46,7 +46,7 @@ class Person:
 if __name__ == '__main__':
     classic_person = ClassicPerson(fake.first_name(), fake.street_address(), fake.ssn(), fake.city(), fake.email())
     print(classic_person)
-    
+
     crowd = []
     for _ in range(1000):
         crowd.append(Person(fake.first_name(), fake.street_address(), fake.ssn(), fake.city(), fake.email()))
@@ -58,4 +58,3 @@ if __name__ == '__main__':
     davids = [person for person in crowd if person.matches_description("David")]
     print(f"We have {len(davids)} Davids.")
     print(f"But I'm sorry Dave, I cannot let you do that.")
-
