@@ -9,7 +9,8 @@ from typing import Optional, cast
 import dataclasses_json
 from dataclasses_json import dataclass_json, config, LetterCase, Undefined
 
-from simulated_rest_api.api import get_comment_with_author, get_comment, get_comment_with_lots_of_other_data
+from dataclasses_vs_classic_classes.simulated_rest_api.api import get_comment_with_author, get_comment, \
+    get_comment_with_lots_of_other_data
 
 SENTINEL = cast(object, None)
 

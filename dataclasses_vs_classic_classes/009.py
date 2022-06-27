@@ -6,7 +6,7 @@
 import copy
 from pprint import pprint
 
-from simulated_rest_api.api import get_comment
+from dataclasses_vs_classic_classes.simulated_rest_api.api import get_comment
 
 
 class Comment:
@@ -61,6 +61,7 @@ print(comments_to_behaviour[comment_to_be_checked])
 # prints nicely now...
 
 # let's be evil again
+# print(comment_to_be_checked.comment_id)
 # comment_to_be_checked.comment_id = 1
 # when we uncomment above line we get AttributeError: can't set attribute 'comment_id' as expected now
 

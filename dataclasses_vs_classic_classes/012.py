@@ -6,13 +6,13 @@
 import copy
 import dataclasses
 import inspect
-from dataclasses import asdict, astuple
+from dataclasses import asdict, astuple, dataclass
 from pprint import pprint
 
-from simulated_rest_api.api import get_comment_with_author
+from dataclasses_vs_classic_classes.simulated_rest_api.api import get_comment_with_author
 
 
-@dataclasses.dataclass(frozen=True, order=True)
+@dataclass(frozen=True, order=True)
 class Comment:
     comment_id: int
     text: str
@@ -63,7 +63,7 @@ pprint(inspect.getmembers(Comment, inspect.isfunction))
 
 
 # But default generates these:
-@dataclasses.dataclass
+@dataclass
 class DefaultComment:
     comment_id: int
     text: str
