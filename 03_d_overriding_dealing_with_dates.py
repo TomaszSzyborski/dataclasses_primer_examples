@@ -28,3 +28,6 @@ print(from_date)
 
 from_date = DataClassWithIsoDatetime.from_json('{"created_at": "2022-06-05"}')
 print(from_date)
+
+from_date = DataClassWithIsoDatetime.from_json('{"created_at": "2023-06-09T10:20:02.988968Z"}')
+print(from_date)
